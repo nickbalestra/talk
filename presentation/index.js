@@ -37,7 +37,9 @@ require("spectacle/lib/themes/default/index.css");
 
 
 const images = {
+  horseduck: require("../assets/horseduck.jpg"),
   duck: require("../assets/duck.png"),
+  kat: require("../assets/kat.png"),
   bigDuck: 'http://i.imgur.com/lFeTr.jpg',
   redux: require("../assets/redux.png"),
   futurama: 'http://cdn.pcwallart.com/images/futurama-fry-gif-wallpaper-4.jpg',
@@ -99,9 +101,7 @@ export default class Presentation extends React.Component {
 
 
            <Slide transition={["spin", "zoom"]} bgColor="black">
-           <Heading size={1} caps fit textColor="tertiary">
-                action => state
-              </Heading>
+
             <Image width="100%" src={images.redux}/>
           </Slide>
 
@@ -163,15 +163,9 @@ export default class Presentation extends React.Component {
             </Layout>
           </Slide>
 
-          <Slide transition={["spin", "zoom"]} bgColor="primary" bgImage={images.futurama} bgDarken={0.55}>
-          <Heading size={1} caps textColor="tertiary">
-                wait!
-              </Heading>
-              <Appear>
-              <Heading size={1} caps textColor="tertiary">
-                What about async?
-              </Heading>
-               </Appear>
+          <Slide transition={["spin", "zoom"]} bgColor="primary" bgImage={images.futurama}>
+
+
           </Slide>
           <Slide transition={["spin","zoom"]} bgColor="black">
              <Heading size={1} caps textColor="primary">
@@ -204,13 +198,31 @@ export default class Presentation extends React.Component {
                 Solution(s)
               </Heading>
               <Appear>
-               <Text textColor="secondary" textSize="1.5em" margin="20px 0px 0px" bold>redux-thunk, redux-promise, redux-async-queue, redux-debounce, redux-async, redux-await, redux-async-connect, redux-loop, redux-loop,...
+               <Text textColor="secondary" textSize="1.5em" margin="20px 0px 0px" bold>redux-thunk, redux-promise, redux-async-queue, redux-debounce, redux-async, redux-await, redux-async-connect, redux-loop, redux-loop, redux-observables.
              </Text>
              </Appear>
           </Slide>
 
-           <Slide transition={["fade"]} bgColor="white">
-             <Image width="60%" src={images.standards}/>
+           <Slide transition={["slide", "spin"]} bgColor="primary">
+            <Heading caps fit size={1} textColor="tertiary">
+              ...One more thing
+            </Heading>
+            <Appear>
+            <Heading caps fit size={1} textColor="secondary">
+              redux-cycle-middleware
+            </Heading>
+            </Appear>
+          </Slide>
+          <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
+            <Image src={images.kat.replace("/", "")} margin="0px auto 40px" height="293px" Radius="100%"/>
+            <Heading size={2} caps fit textColor="primary" textFont="primary">
+              Wait what?
+            </Heading>
+          </Slide>
+
+           <Slide transition={["spin", "zoom"]} bgColor="black" bgImage={images.horseduck}>
+
+
           </Slide>
 
           <Slide transition={["spin", "zoom"]} bgColor="secondary">
