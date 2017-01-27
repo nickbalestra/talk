@@ -39,13 +39,13 @@ require("spectacle/lib/themes/default/index.css");
 const images = {
   horseduck: require("../assets/horseduck.jpg"),
   duck: require("../assets/duck.png"),
+  reduxLogo: require("../assets/redux-logo.png"),
+  cycleLogo: require("../assets/cycle-logo.svg"),
   kat: require("../assets/kat.png"),
   bigDuck: 'http://i.imgur.com/lFeTr.jpg',
   redux: require("../assets/redux.png"),
   futurama: 'http://cdn.pcwallart.com/images/futurama-fry-gif-wallpaper-4.jpg',
   logo: require("../assets/formidable-logo.svg"),
-  markdown: require("../assets/markdown.png"),
-  standards: require("../assets/standards.png")
 };
 
 preloader(images);
@@ -70,10 +70,9 @@ export default class Presentation extends React.Component {
             <Heading size={1} fit caps textColor="black">
               using Functional Reactive Programming
             </Heading>
-
           </Slide>
 
-          <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
+          <Slide transition={["slide"]} bgColor="black">
             <Image src={images.duck} margin="0px auto 40px" height="128px"/>
             <Image src={images.duck} margin="0px auto 40px" height="128px"/>
             <Image src={images.duck} margin="0px auto 40px" height="128px"/>
@@ -81,12 +80,18 @@ export default class Presentation extends React.Component {
               3 ducks what?
             </Heading>
           </Slide>
+
+          <Slide transition={["spin", "zoom"]} bgColor="white">
+            <Heading margin="0 0 40px 0" caps fit textColor="#764ABC" size={1}>
+              Let's talk about
+             </Heading>
+             <Image src={images.reduxLogo} margin="0px auto 40px" width="400px"/>
+          </Slide>
+
           <Slide transition={["spin", "zoom"]} bgColor="tertiary" >
-
-              <Heading size={1} caps fit textColor="primary">
-                State management
-              </Heading>
-
+            <Heading size={1} caps fit textColor="primary">
+              State management
+            </Heading>
             <Appear fid="1">
               <Heading size={1} caps fit textColor="secondary">
                 Agnostic
@@ -99,58 +104,59 @@ export default class Presentation extends React.Component {
             </Appear>
           </Slide>
 
-
-           <Slide transition={["spin", "zoom"]} bgColor="black">
-
+          <Slide transition={["spin", "zoom"]} bgColor="black">
             <Image width="100%" src={images.redux}/>
           </Slide>
 
-
-          <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
-             <Heading size={1} caps textColor="tertiary">
-                API
-              </Heading>
-               <Appear>
-            <Text textColor="tertiary"  textSize="1.5em" margin="20px 0px 0px">
-              createStore(reducer, [preloadedState], [enhancer])
+          <Slide transition={["zoom", "fade"]} bgColor="primary">
+            <Heading size={1} caps textColor="tertiary">
+              API
+            </Heading>
+            <Appear>
+              <Text textColor="tertiary"  textSize="1.5em" margin="20px 0px 0px">
+                createStore(reducer, [preloadedState], [enhancer])
              </Text>
-</Appear>
-
-
-
-
-              <Appear>
-                <Text bold textColor="tertiary"  textSize="1.5em" margin="20px 0px 0px">
-              Store.getState()
-             </Text>
-              </Appear>
-              <Appear><Text textColor="tertiary"  textSize="1.5em" margin="20px 0px 0px" bold>Store.dispatch(action)</Text></Appear>
-              <Appear><Text textColor="tertiary"  textSize="1.5em" margin="20px 0px 0px" bold>Store.subscribe(listener)</Text></Appear>
-
+            </Appear>
+            <Appear>
+              <Text bold textColor="tertiary"  textSize="1.5em" margin="20px 0px 0px">
+                Store.getState()
+              </Text>
+            </Appear>
+            <Appear>
+              <Text textColor="tertiary"  textSize="1.5em" margin="20px 0px 0px" bold>
+                Store.dispatch(action)
+              </Text>
+            </Appear>
+            <Appear>
+              <Text textColor="tertiary"  textSize="1.5em" margin="20px 0px 0px" bold>
+                Store.subscribe(listener)
+              </Text>
+            </Appear>
           </Slide>
 
           <Slide transition={["zoom", "fade"]} bgColor="primary" >
-          <Heading size={1} caps textColor="tertiary">
-                Action
-              </Heading>
-              <Appear><div>
-           <Text textColor="tertiary" textSize="1.5em" margin="20px 0px 0px" bold>
-              {"{"} type: 'INCREMENT', payload: 1 {"}"}
-             </Text></div>
-             </Appear>
+            <Heading size={1} caps textColor="tertiary">
+              Action
+            </Heading>
+            <Appear>
+              <div>
+                <Text textColor="tertiary" textSize="1.5em" margin="20px 0px 0px" bold>
+                  {"{"} type: 'INCREMENT', payload: 1 {"}"}
+                </Text>
+              </div>
+            </Appear>
           </Slide>
 
           <Slide transition={["zoom", "fade"]} bgColor="primary" >
-          <Heading size={1} caps textColor="tertiary">
-                Reducer
-              </Heading>
-               <Appear>
-            <Text textColor="tertiary" textSize="1.5em" margin="20px 0px 0px" bold>
-              (state, action) => state
-             </Text>
-              </Appear>
+            <Heading size={1} caps textColor="tertiary">
+              Reducer
+            </Heading>
+            <Appear>
+              <Text textColor="tertiary" textSize="1.5em" margin="20px 0px 0px" bold>
+                (state, action) => state
+              </Text>
+            </Appear>
           </Slide>
-
 
           <Slide transition={["zoom", "fade"]} bgColor="primary">
             <Heading caps fit>Sounds familiar?</Heading>
@@ -164,111 +170,82 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["spin", "zoom"]} bgColor="primary" bgImage={images.futurama}>
-
-
-          </Slide>
-          <Slide transition={["spin","zoom"]} bgColor="black">
-             <Heading size={1} caps textColor="primary">
-                Problem
-              </Heading>
+            <Layout>
               <Appear>
-               <Text textColor="tertiary" textSize="1.5em" margin="20px 0px 0px" bold>do(async)
+                <Fill>
+                  <Heading size={4} caps textColor="black" bgColor="white" margin={10} padding={10}>
+                    (state, action) => state
+                  </Heading>
+                </Fill>
+              </Appear>
+            </Layout>
+          </Slide>
+
+          <Slide transition={["spin","zoom"]} bgColor="black">
+            <Heading size={1} caps textColor="primary">
+              Problem
+            </Heading>
+            <Appear>
+              <Text textColor="tertiary" textSize="1.5em" margin="20px 0px 0px" bold>
+               do(async)
+              </Text>
+            </Appear>
+            <Appear>
+              <Text textColor="tertiary" textSize="1.5em" margin="20px 0px 0px" bold>
+                .then(dispatch(action));
              </Text>
-             </Appear>
-                           <Appear>
-               <Text textColor="tertiary" textSize="1.5em" margin="20px 0px 0px" bold>.then(dispatch(action));
-             </Text>
-             </Appear>
-             <Appear>
-             <Text textColor="primary" textSize="1.5em" margin="20px 0px 0px" bold>dispatch(asyncAtion);
-             </Text>
-             </Appear>
-             <Appear>
-             <Text textColor="primary" textSize="1.5em" margin="20px 0px 0px" bold>do(async)
-             </Text>
-             </Appear>
-             <Appear>
-             <Text textColor="primary" textSize="1.5em" margin="20px 0px 0px" bold>.then(dispatch(action));
-             </Text>
-             </Appear>
+            </Appear>
+            <Appear>
+              <Text textColor="primary" textSize="1.5em" margin="20px 0px 0px" bold>
+                dispatch(asyncAtion);
+              </Text>
+            </Appear>
+            <Appear>
+              <Text textColor="primary" textSize="1.5em" margin="20px 0px 0px" bold>
+                do(async)
+              </Text>
+            </Appear>
+            <Appear>
+              <Text textColor="primary" textSize="1.5em" margin="20px 0px 0px" bold>
+                .then(dispatch(action));
+              </Text>
+            </Appear>
           </Slide>
 
           <Slide transition={["spin","zoom"]} bgColor="white">
-             <Heading size={1} caps textColor="primary">
-                Solution(s)
-              </Heading>
-              <Appear>
-               <Text textColor="secondary" textSize="1.5em" margin="20px 0px 0px" bold>redux-thunk, redux-promise, redux-async-queue, redux-debounce, redux-async, redux-await, redux-async-connect, redux-loop, redux-loop, redux-observables.
-             </Text>
-             </Appear>
-          </Slide>
-
-           <Slide transition={["slide", "spin"]} bgColor="primary">
-            <Heading caps fit size={1} textColor="tertiary">
-              ...One more thing
+            <Heading size={1} caps textColor="primary">
+              Solutions
             </Heading>
             <Appear>
-            <Heading caps fit size={1} textColor="secondary">
-              redux-cycle-middleware
-            </Heading>
+              <Text textColor="secondary" textSize="1.5em" margin="20px 0px 0px" bold>
+                redux-thunk, redux-promise, redux-async-queue, redux-debounce, redux-async, redux-await, redux-async-connect, redux-loop, redux-loop, redux-observables,..
+              </Text>
             </Appear>
           </Slide>
-          <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
+
+          <Slide transition={["slide", "spin"]} bgColor="primary">
+            <Heading caps fit size={1} textColor="secondary">
+              Or, we could just use
+            </Heading>
+            <Heading caps fit size={1} textColor="tertiary">
+              Cycle.js
+            </Heading>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="black">
             <Image src={images.kat.replace("/", "")} margin="0px auto 40px" height="293px" Radius="100%"/>
             <Heading size={2} caps fit textColor="primary" textFont="primary">
               Wait what?
             </Heading>
           </Slide>
 
-           <Slide transition={["spin", "zoom"]} bgColor="black" bgImage={images.horseduck}>
+          <Slide transition={["spin", "zoom"]} bgColor="black" bgImage={images.horseduck}></Slide>
 
-
-          </Slide>
-
-          <Slide transition={["spin", "zoom"]} bgColor="secondary">
-            <Heading caps fit size={1} textColor="primary">
-              Inline Markdown
+          <Slide transition={["spin", "zoom"]} bgColor="white">
+            <Heading margin="0 0 40px 0" caps fit textColor="#51D3D9" size={1}>
+              Let's talk about
             </Heading>
-            <Markdown>
-              {`
-![Markdown Logo](${images.markdown.replace("/", "")})
-
-You can write inline images, [Markdown Links](http://commonmark.org), paragraph text and most other markdown syntax
-* Lists too!
-* With ~~strikethrough~~ and _italic_
-* And lets not forget **bold**
-              `}
-            </Markdown>
-          </Slide>
-          <Slide transition={["slide", "spin"]} bgColor="primary">
-            <Heading caps fit size={1} textColor="tertiary">
-              Smooth
-            </Heading>
-            <Heading caps fit size={1} textColor="secondary">
-              Combinable Transitions
-            </Heading>
-          </Slide>
-          <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-            <List>
-              <Appear><ListItem>Inline style based theme system</ListItem></Appear>
-              <Appear><ListItem>Autofit text</ListItem></Appear>
-              <Appear><ListItem>Flexbox layout system</ListItem></Appear>
-              <Appear><ListItem>React-Router navigation</ListItem></Appear>
-              <Appear><ListItem>PDF export</ListItem></Appear>
-              <Appear><ListItem>And...</ListItem></Appear>
-            </List>
-          </Slide>
-          <Slide transition={["slide"]} bgColor="primary">
-            <Heading size={1} caps fit textColor="tertiary">
-              Your presentations are interactive
-            </Heading>
-            <Interactive/>
-          </Slide>
-          <Slide transition={["spin", "slide"]} bgColor="tertiary">
-            <Heading size={1} caps fit lineHeight={1.5} textColor="primary">
-              Made with love in Seattle by
-            </Heading>
-            <Link href="http://www.formidablelabs.com"><Image width="100%" src={images.logo}/></Link>
+            <Image src={images.cycleLogo} margin="0px auto 40px" height="400px"/>
           </Slide>
         </Deck>
       </Spectacle>
