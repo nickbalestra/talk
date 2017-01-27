@@ -42,10 +42,9 @@ const images = {
   reduxLogo: require("../assets/redux-logo.png"),
   cycleLogo: require("../assets/cycle-logo.svg"),
   kat: require("../assets/kat.png"),
-  bigDuck: 'http://i.imgur.com/lFeTr.jpg',
   redux: require("../assets/redux.png"),
-  futurama: 'http://cdn.pcwallart.com/images/futurama-fry-gif-wallpaper-4.jpg',
-  logo: require("../assets/formidable-logo.svg"),
+  futurama: require("../assets/futurama.jpg"),
+  logo: require("../assets/formidable-logo.svg")
 };
 
 preloader(images);
@@ -85,7 +84,7 @@ export default class Presentation extends React.Component {
             <Heading margin="0 0 40px 0" caps fit textColor="#764ABC" size={1}>
               Let's talk about
              </Heading>
-             <Image src={images.reduxLogo} margin="0px auto 40px" width="400px"/>
+             <Image src={images.reduxLogo.replace("/", "")} margin="0px auto 40px" width="400px"/>
           </Slide>
 
           <Slide transition={["spin", "zoom"]} bgColor="tertiary" >
@@ -105,7 +104,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["spin", "zoom"]} bgColor="black">
-            <Image width="100%" src={images.redux}/>
+            <Image width="100%" src={images.redux.replace("/", "")}/>
           </Slide>
 
           <Slide transition={["zoom", "fade"]} bgColor="primary">
@@ -113,22 +112,22 @@ export default class Presentation extends React.Component {
               API
             </Heading>
             <Appear>
-              <Text textColor="tertiary"  textSize="1.5em" margin="20px 0px 0px">
+              <Text textColor="tertiary" textSize="1.5em" margin="20px 0px 0px">
                 createStore(reducer, [preloadedState], [enhancer])
              </Text>
             </Appear>
             <Appear>
-              <Text bold textColor="tertiary"  textSize="1.5em" margin="20px 0px 0px">
+              <Text bold textColor="tertiary" textSize="1.5em" margin="20px 0px 0px">
                 Store.getState()
               </Text>
             </Appear>
             <Appear>
-              <Text textColor="tertiary"  textSize="1.5em" margin="20px 0px 0px" bold>
+              <Text textColor="tertiary" textSize="1.5em" margin="20px 0px 0px" bold>
                 Store.dispatch(action)
               </Text>
             </Appear>
             <Appear>
-              <Text textColor="tertiary"  textSize="1.5em" margin="20px 0px 0px" bold>
+              <Text textColor="tertiary" textSize="1.5em" margin="20px 0px 0px" bold>
                 Store.subscribe(listener)
               </Text>
             </Appear>
@@ -169,7 +168,7 @@ export default class Presentation extends React.Component {
             </Layout>
           </Slide>
 
-          <Slide transition={["spin", "zoom"]} bgColor="primary" bgImage={images.futurama}>
+          <Slide transition={["spin", "zoom"]} bgColor="primary" bgImage={images.futurama.replace("/", "")}>
             <Layout>
               <Appear>
                 <Fill>
@@ -181,7 +180,7 @@ export default class Presentation extends React.Component {
             </Layout>
           </Slide>
 
-          <Slide transition={["spin","zoom"]} bgColor="black">
+          <Slide transition={["spin", "zoom"]} bgColor="black">
             <Heading size={1} caps textColor="primary">
               Problem
             </Heading>
@@ -212,7 +211,7 @@ export default class Presentation extends React.Component {
             </Appear>
           </Slide>
 
-          <Slide transition={["spin","zoom"]} bgColor="white">
+          <Slide transition={["spin", "zoom"]} bgColor="white">
             <Heading size={1} caps textColor="primary">
               Solutions
             </Heading>
@@ -239,7 +238,7 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
 
-          <Slide transition={["spin", "zoom"]} bgColor="black" bgImage={images.horseduck}></Slide>
+          <Slide transition={["spin", "zoom"]} bgColor="black" bgImage={images.horseduck.replace("/", "")} />
 
           <Slide transition={["spin", "zoom"]} bgColor="white">
             <Heading margin="0 0 40px 0" caps fit textColor="#51D3D9" size={1}>
