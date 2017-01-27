@@ -59,7 +59,9 @@ export default class Presentation extends React.Component {
       <Spectacle theme={theme}>
         <Deck transition={["zoom", "slide"]} transitionDuration={500}>
 
-          <Slide transition={["zoom"]} bgColor="primary">
+          <Slide transition={["zoom"]} bgColor="primary" notes={`
+            Introduction slide
+          `}>
             <Heading size={1} fit caps>
               Dealing with async
             </Heading>
@@ -71,7 +73,9 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
 
-          <Slide transition={["slide"]} bgColor="black">
+          <Slide transition={["slide"]} bgColor="black" notes={`
+            redux sounds like threeducks
+          `}>
             <Image src={images.duck} margin="0px auto 40px" height="128px"/>
             <Image src={images.duck} margin="0px auto 40px" height="128px"/>
             <Image src={images.duck} margin="0px auto 40px" height="128px"/>
@@ -80,14 +84,26 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
 
-          <Slide transition={["spin", "zoom"]} bgColor="white">
+          <Slide transition={["spin", "zoom"]} bgColor="white" notes={`
+            Ok, let's talk about redux!
+            Just to know, how many of you use redux?
+          `}>
             <Heading margin="0 0 40px 0" caps fit textColor="#764ABC" size={1}>
-              Let's talk about
+              Ok, Let's talk about
              </Heading>
              <Image src={images.reduxLogo.replace("/", "")} margin="0px auto 40px" width="400px"/>
           </Slide>
 
-          <Slide transition={["spin", "zoom"]} bgColor="tertiary" >
+          <Slide transition={["spin", "zoom"]} bgColor="tertiary" notes={`
+            Redux is a state management library, evolving the idea of the flux pattern.
+            It's agnostic in the sense that it doesn't come with a view provider, nor it does tie to any specific frontend framework. Bindings are available for multiple frameworks, people use it with react, angular, ember.
+            Thanks to its completely predictable behavior is possible to implement things like logging, hot reloading, time travel, universal apps, record and replay.
+            Because of this characteristics redux make it easer to manage and reason about state in your app. It follow three principles:
+            - Single source of truth
+            - State is read-only
+            - Changes are made with pure functions
+            Let's see how we could visually represent it.
+          `}>
             <Heading size={1} caps fit textColor="primary">
               State management
             </Heading>
@@ -103,11 +119,25 @@ export default class Presentation extends React.Component {
             </Appear>
           </Slide>
 
-          <Slide transition={["spin", "zoom"]} bgColor="black">
+          <Slide transition={["spin", "zoom"]} bgColor="black" notes={`
+            Differently then flux, with with redux you have a single store.
+            Internally the store have few concepts: state, reducer and middlewares.
+            Actions get dispatched through middleares (similar to how requests/responses get passed to express middlewares), before being passed to reducer, that will emit a new state.
+            To create a redux store is pretty simple...
+          `}>
             <Image width="100%" src={images.redux.replace("/", "")}/>
           </Slide>
 
-          <Slide transition={["zoom", "fade"]} bgColor="primary">
+          <Slide transition={["zoom", "fade"]} bgColor="primary"  notes={`
+            ...we invoke the createStore factory passing it a reducer, and optionally an initial state and a a store enhancer like for example middlewarea.
+            The main API are:
+            - getState
+            it will return the current state
+            - dispatch
+            it will invoke the reducer passing it the action (together with the current state) and will emit return a new state
+            - subscribe
+            we can add a listener to be called every time a new state get generated
+          `}>
             <Heading size={1} caps textColor="tertiary">
               API
             </Heading>
@@ -133,7 +163,10 @@ export default class Presentation extends React.Component {
             </Appear>
           </Slide>
 
-          <Slide transition={["zoom", "fade"]} bgColor="primary" >
+          <Slide transition={["zoom", "fade"]} bgColor="primary" notes={`
+            I mentioned about dispatching actions, let quickly see how they look likes:
+            Nothing to fancy, simply POJOs, plain old javasrcipt objects. The only mandatory key that they need to have is 'type'. In this exaple it also carry a payload.
+          `}>
             <Heading size={1} caps textColor="tertiary">
               Action
             </Heading>
@@ -146,7 +179,10 @@ export default class Presentation extends React.Component {
             </Appear>
           </Slide>
 
-          <Slide transition={["zoom", "fade"]} bgColor="primary" >
+          <Slide transition={["zoom", "fade"]} bgColor="primary" notes={`
+            When we dispacth actions, behind the scene the store simply invoke it's reducer with the current state and the action as arguments.
+            Reducers are pure function, normally are implemented as switches to match against action types and reduce the state accordingly.
+          `}>
             <Heading size={1} caps textColor="tertiary">
               Reducer
             </Heading>
@@ -157,7 +193,9 @@ export default class Presentation extends React.Component {
             </Appear>
           </Slide>
 
-          <Slide transition={["zoom", "fade"]} bgColor="primary">
+          <Slide transition={["zoom", "fade"]} bgColor="primary"  notes={`
+            Do some of you use elm? (Btw if you don't you should give it a try, its a pure functional language for the browser and is awesome). It's so awesome that many of the idea you see in redux where ported over from elm. For example actions (now called messages in elm) are simply build around union types, (type...) and in elm the switch statement is the only way to unwrap their payload,...
+          `}>
             <Heading caps fit>Sounds familiar?</Heading>
             <Layout>
               <Fill>
@@ -168,16 +206,22 @@ export default class Presentation extends React.Component {
             </Layout>
           </Slide>
 
-          <Slide transition={["spin", "zoom"]} bgColor="primary" bgImage={images.futurama.replace("/", "")}>
-            <Layout>
-              <Appear>
-                <Fill>
-                  <Heading size={4} caps textColor="black" bgColor="white" margin={10} padding={10}>
-                    (state, action) => state
-                  </Heading>
-                </Fill>
-              </Appear>
-            </Layout>
+          <Slide transition={["spin", "zoom"]} bgColor="primary" bgImage={images.futurama.replace("/", "")} notes={`
+            mmm...yes
+          `}>
+
+          <Appear>
+          <div>
+             <br />
+              <Text textColor="tertiary" textSize="2em" caps bold bgColor="black">
+                Not sure if it works with async
+              </Text>
+              <br /><br /><br /><br />
+              <Text textSize="2em" textColor="tertiary" caps bold bgColor="black">
+                (state, action) => state
+              </Text>
+              </div>
+          </Appear>
           </Slide>
 
           <Slide transition={["spin", "zoom"]} bgColor="black">
@@ -196,7 +240,7 @@ export default class Presentation extends React.Component {
             </Appear>
             <Appear>
               <Text textColor="primary" textSize="1.5em" margin="20px 0px 0px" bold>
-                dispatch(asyncAtion);
+                dispatch(action);
               </Text>
             </Appear>
             <Appear>
@@ -242,10 +286,28 @@ export default class Presentation extends React.Component {
 
           <Slide transition={["spin", "zoom"]} bgColor="white">
             <Heading margin="0 0 40px 0" caps fit textColor="#51D3D9" size={1}>
-              Let's talk about
+              Ok, Let's talk about
             </Heading>
             <Image src={images.cycleLogo} margin="0px auto 40px" height="400px"/>
           </Slide>
+
+          <Slide transition={["spin", "zoom"]} bgColor="white">
+            <Heading size={1} caps fit textColor="primary">
+              Cleaner Code
+            </Heading>
+            <Appear fid="1">
+              <Heading size={1} caps fit textColor="secondary">
+                Agnostic
+              </Heading>
+            </Appear>
+            <Appear fid="2">
+              <Heading size={1} caps fit textColor="secondary">
+                DataFlow
+              </Heading>
+            </Appear>
+          </Slide>
+
+
         </Deck>
       </Spectacle>
     );
