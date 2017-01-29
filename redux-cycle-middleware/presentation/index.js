@@ -18,7 +18,6 @@ import {
   Markdown,
   Quote,
   Slide,
-  Spectacle,
   Text
 } from "spectacle";
 
@@ -56,8 +55,7 @@ const theme = createTheme({
 export default class Presentation extends React.Component {
   render() {
     return (
-      <Spectacle theme={theme}>
-        <Deck transition={["zoom", "slide"]} transitionDuration={500}>
+      <Deck theme={theme} transition={["zoom", "slide"]} transitionDuration={500}>
 
           <Slide transition={["zoom"]} bgColor="primary" notes={`
             Introduction slide
@@ -309,7 +307,6 @@ export default class Presentation extends React.Component {
 
 
         </Deck>
-      </Spectacle>
     );
   }
 }
