@@ -33,11 +33,14 @@ import Interactive from "../assets/interactive";
 // Require CSS
 require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
+require("./base.css");
 
 
 const images = {
   horseduck: require("../assets/horseduck.jpg"),
   duck: require("../assets/duck.png"),
+  quiquoqua: require("../assets/qui-quo-qua.jpg"),
+  avatar: require("../assets/avatar.png"),
   reduxLogo: require("../assets/redux-logo.png"),
   cycleLogo: require("../assets/cycle-logo.svg"),
   kat: require("../assets/kat.png"),
@@ -49,35 +52,54 @@ const images = {
 preloader(images);
 
 const theme = createTheme({
-  primary: "#00AAFF"
+  primary: "#00AAFF",
+  secondary: "#222",
+  tertiary: "#aaa"
 });
 
 export default class Presentation extends React.Component {
   render() {
     return (
-      <Deck theme={theme} transition={["zoom", "slide"]} transitionDuration={500}>
+      <Deck theme={theme} transition={[ 'slide', 'fade' ]} transitionDuration={500}>
 
-          <Slide transition={["zoom"]} bgColor="primary" notes={`
+          <Slide transition={["slide", "fade"]} bgColor="white" notes={`
             Introduction slide
           `}>
-            <Heading size={1} fit caps>
-              Dealing with async
-            </Heading>
-            <Heading size={1} fit caps >
-              actions in Redux
-            </Heading>
-            <Heading size={1} fit caps textColor="black">
-              using Functional Reactive Programming
-            </Heading>
+           <Heading size={1} fit caps textColor="secondary">
+      3 Async Ducks
+    </Heading>
+    <Heading size={2} fit textColor="tertiary">
+      A tale about composing async actions in Redux using F&RP
+    </Heading>
+
+    <br />
+
+    <Link href="http://nick.balestra.ch/talk/3-async-ducks">
+      nick.balestra.ch/talk/3-async-ducks
+    </Link>
           </Slide>
 
-          <Slide transition={["slide"]} bgColor="black" notes={`
+
+          <Slide transition={["spin", "zoom"]} bgColor="white" notes={`
+            Introduction slide
+          `}>
+          <Image width="100px" src={images.avatar.replace("/", "")} />
+           <Heading size={1} textSize="1em" textColor="secondary" margin="10px 0">
+      Nick Balestra
+    </Heading>
+    <Heading size={2} textSize="1em" textColor="tertiary">
+      Life is an npm install
+    </Heading>
+          </Slide>
+
+
+
+          <Slide transition={["slide"]} bgColor="white" notes={`
             redux sounds like threeducks
           `}>
-            <Image src={images.duck} margin="0px auto 40px" height="128px"/>
-            <Image src={images.duck} margin="0px auto 40px" height="128px"/>
-            <Image src={images.duck} margin="0px auto 40px" height="128px"/>
-            <Heading size={2} caps fit textColor="primary" textFont="primary">
+            <Image src={images.quiquoqua.replace("/", "")} width="300px"/>
+
+            <Heading size={2} caps textColor="primary" textColor="secondary" >
               3 ducks what?
             </Heading>
           </Slide>
@@ -86,10 +108,10 @@ export default class Presentation extends React.Component {
             Ok, let's talk about redux!
             Just to know, how many of you use redux?
           `}>
-            <Heading margin="0 0 40px 0" caps fit textColor="#764ABC" size={1}>
-              Ok, Let's talk about
+            <Heading size={2} size={2} textColor="secondary">
+              npm install redux
              </Heading>
-             <Image src={images.reduxLogo.replace("/", "")} margin="0px auto 40px" width="400px"/>
+
           </Slide>
 
           <Slide transition={["spin", "zoom"]} bgColor="tertiary" notes={`
