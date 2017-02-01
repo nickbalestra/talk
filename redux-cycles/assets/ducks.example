@@ -1,0 +1,32 @@
+// ACTION TYPES (Format: app-name/reducer/ACTION_TYPE)
+// =======================================================
+const LOGIN = 'my-app/auth/LOGIN'
+...
+
+// ACTION CREATORS
+// =======================================================
+export function doLogin (email, password) {
+  ...
+}
+...
+
+// REDUCER
+// =======================================================
+const initialState = {
+  ...
+}
+export default function reducer (state = initialState, {type, payload}) {
+  ...
+}
+
+// CYCLE
+// =======================================================
+const cycleLogin = (sources) => {
+  ...
+}
+...
+
+export const cycle = combineCycles(
+  cycleLogin,
+  ...
+)
