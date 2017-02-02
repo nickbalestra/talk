@@ -1,4 +1,4 @@
-export function searchUsers(sources) {
+export function autocomplete(sources) {
   const searchQuery$ = sources.ACTION
     .filter(action => action.type === ActionTypes.SEARCHED_USERS)
     .map(action => action.payload.query)

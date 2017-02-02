@@ -1,0 +1,10 @@
+function main(sources) {
+  const pong$ = sources.ACTION
+    .filter(action => action.type === 'PING')
+    .compose(debounce(500))
+    .mapTo({ type: 'PONG' });
+
+  return {
+    ACTION: pong$
+  }
+}
