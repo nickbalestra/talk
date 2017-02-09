@@ -279,21 +279,21 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide bgColor="primary" transition={["fade"]}>
-          <Heading caps fit size={6} textColor="secondary" bgColor="primary">+2 years in production</Heading>
+          <Heading caps fit size={6} textColor="secondary" bgColor="primary">2+ years in production</Heading>
         <Appear>
-          <Heading caps fit size={6} textColor="red" bgColor="primary">+140 components</Heading>
+          <Heading caps fit size={6} textColor="red" bgColor="primary">140+ components</Heading>
           </Appear>
           <Appear>
-          <Heading caps fit size={6} textColor="secondary" bgColor="primary">Owned by +10 teams</Heading>
+          <Heading caps fit size={6} textColor="secondary" bgColor="primary">Owned by 10+ teams</Heading>
           </Appear>
           <Appear>
-           <Heading caps fit size={6} textColor="red" bgColor="primary">publishing +5 time/day</Heading>
+           <Heading caps fit size={6} textColor="red" bgColor="primary">publishing 5+ time/day</Heading>
            </Appear>
            <Appear>
            <Heading caps fit size={6} textColor="secondary" bgColor="primary">used in 18 microsites + emails + external widgets</Heading>
            </Appear>
            <Appear>
-           <Heading caps fit size={6} textColor="red" bgColor="primary">Handling Milions requests/day</Heading>
+           <Heading caps fit size={6} textColor="red" bgColor="primary">Handling Millions requests/day</Heading>
            </Appear>
         </Slide>
 
