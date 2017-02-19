@@ -1,6 +1,0 @@
-const fetchUserEpic = action$ =>
-  action$.ofType(FETCH_USER)
-    .mergeMap(action =>
-      ajax.getJSON(`https://api.com/${action.payload}`)
-        .map(fetchUserFulfilled)
-    );
