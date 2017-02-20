@@ -1,0 +1,23 @@
+{
+  "main.css": "static/css/main.b29a97b4.css",
+  "main.css.map": "static/css/main.b29a97b4.css.map",
+  "main.js": "static/js/main.aca33ad6.js",
+  "main.js.map": "static/js/main.aca33ad6.js.map",
+  "static/media/OpenSans-Bold.ttf": "static/media/OpenSans-Bold.50145685.ttf",
+  "static/media/OpenSans-Regular.ttf": "static/media/OpenSans-Regular.629a55a7.ttf",
+  "static/media/SourceCodePro-Regular.eot": "static/media/SourceCodePro-Regular.d5892edc.eot",
+  "static/media/SourceCodePro-Regular.ttf": "static/media/SourceCodePro-Regular.1066e54d.ttf",
+  "static/media/SourceCodePro-Regular.woff": "static/media/SourceCodePro-Regular.b6ba2432.woff",
+  "static/media/SourceCodePro-Regular.woff2": "static/media/SourceCodePro-Regular.f43ea4c5.woff2",
+  "static/media/autocompleteFlow.gif": "static/media/autocompleteFlow.fe15b468.gif",
+  "static/media/bg.png": "static/media/bg.0c18f089.png",
+  "static/media/cycle.png": "static/media/cycle.45157b77.png",
+  "static/media/cycleActions.png": "static/media/cycleActions.f8ea7bf3.png",
+  "static/media/danAbramov.gif": "static/media/danAbramov.743f7f78.gif",
+  "static/media/doctorWhoSad.gif": "static/media/doctorWhoSad.cf3a0d91.gif",
+  "static/media/jestResult.png": "static/media/jestResult.c29559e0.png",
+  "static/media/kat.png": "static/media/kat.124d0fae.png",
+  "static/media/logger.png": "static/media/logger.598a919d.png",
+  "static/media/reduxCyclesLogo.png": "static/media/reduxCyclesLogo.fe28a4a4.png",
+  "static/media/whatAboutAsync.png": "static/media/whatAboutAsync.6715b8da.png"
+}
