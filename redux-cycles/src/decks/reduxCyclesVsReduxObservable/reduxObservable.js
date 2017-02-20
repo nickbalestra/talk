@@ -16,7 +16,7 @@ const reduxObservable = () => (
     lang="js"
     code={code}
     ranges={[
-      { loc: [0,8], title: 'A redux-observable epic' },
+      { loc: [0,8], title: 'With redux-observable' },
       { loc: [3,7], note: 'Firing a request' },
       { loc: [3,7], note: 'Imperative Code', image: doctorWhoSad },
     ]}

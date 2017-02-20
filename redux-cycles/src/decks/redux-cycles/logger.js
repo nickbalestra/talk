@@ -21,7 +21,8 @@ const logger = () => (
       { loc: [3,4], note: 'Combining the action stream with a state stream' },
       { loc: [4,5], note: 'Log to the console our stream state' },
       { loc: [4,5], note: 'Log to the console our stream state',image: loggerResult },
-      { loc: [5,12], note: 'Return a stream of \'LOG\' actions to be dispatched' }
+      { loc: [5,6], note: 'Map to a stream of "log action"' },
+      { loc: [7,10], note: 'Return a stream of \'LOG\' actions to be dispatched' }
     ]}
   />
 );

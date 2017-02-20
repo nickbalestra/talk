@@ -10,7 +10,7 @@ const reduxCycles = () => (
     lang="js"
     code={code}
     ranges={[
-      { loc: [0,18], title: 'A redux-cycles cycle' },
+      { loc: [0,18], title: 'With redux-cycles' },
       { loc: [1,7], note: 'Reacting to \'FETCH_USER\' actions' },
       { loc: [3,7], note: 'No request is being fired here' },
       { loc: [15,16], note: 'Sending commands to driver' },

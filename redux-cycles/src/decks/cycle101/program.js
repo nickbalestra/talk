@@ -22,6 +22,7 @@ const program = () => (
       { loc: [1,5], note: 'HTTP responses' },
       { loc: [6,14], note: 'HTTP requests to be performed' },
       { loc: [11,14], note: 'Key in sinks => relative driver' },
+      { loc: [1,10] },
       { loc: [1,10], note: 'Code order doesn\'t matter in FRP', image: kat },
     ]}
   />

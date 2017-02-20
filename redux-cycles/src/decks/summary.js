@@ -12,7 +12,7 @@ import {
 const summary = () => (
   <Slide >
     <Heading margin="20px 0" size={4}  textColor="secondary" textAlign="left">
-      Summary
+      Takeaway
     </Heading>
     <List ordered>
       <Appear><ListItem>Predictable code for async in redux</ListItem></Appear>
