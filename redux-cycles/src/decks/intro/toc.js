@@ -28,27 +28,27 @@ const toc = () => (
     </Appear>
     <Appear>
       <Heading margin="20px 0" size={6}  textColor="secondary" textAlign="left">
-      ├ fatigue++
+      ├ rationale
       </Heading>
     </Appear>
     <Appear>
       <Heading margin="20px 0" size={6}  textColor="secondary" textAlign="left">
-      ├ talk is cheap
+      ├ code examples
       </Heading>
     </Appear>
     <Appear>
       <Heading margin="20px 0" size={6}  textColor="secondary" textAlign="left">
-      ├ expectations
+      ├ testing
       </Heading>
     </Appear>
     <Appear>
       <Heading margin="20px 0" size={6}  textColor="secondary" textAlign="left">
-      ├ ducks on wheels
+      ├ structuring
       </Heading>
     </Appear>
     <Appear>
       <Heading margin="20px 0" size={6}  textColor="secondary" textAlign="left">
-      └ Summary
+      └ takeways
       </Heading>
     </Appear>
   </Slide>
