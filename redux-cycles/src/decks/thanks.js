@@ -1,13 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
 import preloader from 'spectacle/lib/utils/preloader';
 
 import {
   Slide,
-  Image,
-  Layout,
-  Fit,
-  Fill,
   Link,
   Text,
   Heading
@@ -19,12 +14,7 @@ preloader([
   bg
 ]);
 
-const Col = styled(Fill)`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 2rem;
-`;
+
 
 const thanksSlide = () => (
   <Slide bgImage={bg} transition={['fade']}>
