@@ -4,8 +4,10 @@ import basicAPI from './basicAPI';
 import trivialExample from './trivialExample';
 import logger from './logger';
 import combineCycles from './combineCycles';
+import prePreIntro from './pre-preIntro';
 
 const reduxCycles = () => [
+  prePreIntro(),
   preIntro(),
   intro(),
   trivialExample(),
