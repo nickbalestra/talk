@@ -1,7 +1,6 @@
 import React from 'react';
 import preloader from 'spectacle/lib/utils/preloader';
 import WrappedCodeSlide from '../../CodeSlide';
-import { navy } from '../../styles/colors';
 
 import code from './basicAPI.raw';
 import cycleActions from '../../images/cycleActions.png';
