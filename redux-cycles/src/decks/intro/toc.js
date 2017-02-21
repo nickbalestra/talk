@@ -11,11 +11,11 @@ const toc = () => (
     <Heading margin="20px 0" size={1}  textColor="secondary" textAlign="left">
       TOC
     </Heading>
-    <Appear>
+    {/*<Appear>
       <Heading italic textColor="#7C7C7C" margin="20px 0" size={6}  textAlign="left">
       ├ redux 101
       </Heading>
-    </Appear>
+    </Appear>*/}
     <Appear>
       <Heading  margin="20px 0" size={6} textAlign="left" textColor="secondary" >
       ├ cycle 101
