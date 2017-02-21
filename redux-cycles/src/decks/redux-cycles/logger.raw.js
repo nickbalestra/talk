@@ -1,4 +1,4 @@
-const logger = (sources) => {
+const logCycle = (sources) => {
   const log$ = sources.ACTION
     .filter(({type}) => type !== 'LOG')
     .compose(sampleCombine(sources.STATE))
