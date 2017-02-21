@@ -15,8 +15,8 @@ import {
 
 const summary = () => (
   <Slide >
-    <Heading size={4}  textColor="secondary" fit>
-      Why yet another async middleware ?
+    <Heading size={1}  textColor="secondary" fit>
+      Why yet another middleware ?
     </Heading>
     <br /><br />
     <Layout>
@@ -25,8 +25,8 @@ const summary = () => (
           <Appear>
             <TableRow>
               <TableHeaderItem/>
-              <TableHeaderItem>!!Reactive</TableHeaderItem>
-              <TableHeaderItem>!!Declarative</TableHeaderItem>
+              <TableHeaderItem>Reactive</TableHeaderItem>
+              <TableHeaderItem>&& Declarative</TableHeaderItem>
             </TableRow>
           </Appear>
         </TableHeader>

@@ -14,6 +14,7 @@ import testing from './decks/testing';
 import ducks from './decks/ducks';
 import reduxVsRx from './decks/reduxVsRx';
 import summary from './decks/summary';
+import acknowledgement from './decks/acknowledgement';
 
 const makeSlides = () => {
   const slides = merge(
@@ -24,8 +25,9 @@ const makeSlides = () => {
     cyclesVsObservable(),
     testing(),
     ducks(),
-    reduxVsRx(),
     summary(),
+    reduxVsRx(),
+    acknowledgement(),
     thanks()
   );
 

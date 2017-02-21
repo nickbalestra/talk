@@ -15,7 +15,7 @@ preloader([
 const preIntro = () => (
   <Slide bgColor="secondary" transition={['fade']}>
     <Image src={reduxCyclesLogo}
-      width="30rem" />
+      width="50rem" />
   </Slide>
 );
 

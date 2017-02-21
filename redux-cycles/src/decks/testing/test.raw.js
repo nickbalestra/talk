@@ -1,6 +1,7 @@
 describe('searchUsers', () => {
-  it('should emit HTTP requests given many debounced ACTIONs,'
-    + ' and should emit ACTION given HTTP response', (done) => {
+  it('should emit HTTP requests given n debounced ACTIONS '
+    + 'and should emit ACTION given HTTP response',
+    (done) => {
 
     const actionSource = {
       a: actions.searchUsers('l'),

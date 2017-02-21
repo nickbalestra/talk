@@ -18,7 +18,7 @@ const trivialExample = () => (
     ranges={[
       { loc: [0,11], title: 'A trivial example' },
       { loc: [1,4], note: 'Reacting to any \'PING\' action' },
-      { loc: [5,8], note: 'Returning stream of commands to the action driver "Hey, dispatch(PONG)"'},
+      { loc: [5,8], note: 'Returning a stream of commands to the action driver "Hey driver: whenever pong$ emits, dispatch(PONG)"'},
     ]}
   />
 );

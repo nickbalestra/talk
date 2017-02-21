@@ -38,7 +38,7 @@ const updateCycle = (sources) => {
   // do cycle stuff
 }
 
-export const cycle = combine(
+export const cycle = combineCycles(
   fetchCycle,
   updateCycle
 );

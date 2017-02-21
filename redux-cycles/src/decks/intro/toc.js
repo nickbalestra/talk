@@ -8,16 +8,16 @@ import {
 
 const toc = () => (
   <Slide>
-    <Heading margin="20px 0" size={4}  textColor="secondary" textAlign="left">
+    <Heading margin="20px 0" size={1}  textColor="secondary" textAlign="left">
       TOC
     </Heading>
     <Appear>
-      <Heading margin="20px 0" size={6}  textColor="secondary" textAlign="left">
+      <Heading italic textColor="#7C7C7C" margin="20px 0" size={6}  textAlign="left">
       ├ redux 101
       </Heading>
     </Appear>
     <Appear>
-      <Heading margin="20px 0" size={6}  textColor="secondary" textAlign="left">
+      <Heading  margin="20px 0" size={6} textAlign="left" textColor="secondary" >
       ├ cycle 101
       </Heading>
     </Appear>
@@ -48,7 +48,7 @@ const toc = () => (
     </Appear>
     <Appear>
       <Heading margin="20px 0" size={6}  textColor="secondary" textAlign="left">
-      └ takeways
+      └ takeaways
       </Heading>
     </Appear>
   </Slide>

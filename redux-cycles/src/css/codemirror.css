@@ -12,10 +12,10 @@
 /* PADDING */
 
 .CodeMirror-lines {
-  padding: 14px 0; /* Vertical padding around content */
+  padding: 0px 0; /* Vertical padding around content */
 }
 .CodeMirror pre {
-  padding: 0 14px; /* Horizontal padding of content */
+  padding: 0 0px; /* Horizontal padding of content */
 }
 
 .CodeMirror-scrollbar-filler {

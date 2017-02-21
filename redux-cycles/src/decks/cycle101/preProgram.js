@@ -12,8 +12,8 @@ import {
 const preIntro = () => (
   <Slide>
     <BlockQuote>
-      <Quote>Cycle.js is an interesting and unusual way of represting real-world programs.</Quote>
-      <Cite><Link href="https://github.com/cyclejs-community/redux-cycles#whats-this-cycle-thing-anyway" target="_blank">Gosha Arinich</Link>‏</Cite>
+      <Quote italic>Cycle.js is an interesting and unusual way of represting real-world programs.</Quote>
+      <Cite><Link href="https://github.com/cyclejs-community/redux-cycles#whats-this-cycle-thing-anyway" target="_blank">"Gosha Arinich"</Link>‏</Cite>
     </BlockQuote>
   </Slide>
 );

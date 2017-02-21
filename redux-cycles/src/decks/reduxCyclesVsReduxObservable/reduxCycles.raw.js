@@ -1,8 +1,8 @@
 const fetchUserCycle = (sources) => {
   const request$ = sources.ACTION
     .filter(action => action.type === FETCH_USER)
-    .map(action => ({
-      url: `https://api.github.com/users/${action.payload}`,
+    .map(({payload}) => ({
+      url: `https://api.github.com/users/${payload}`,
       category: 'users',
     }));
 

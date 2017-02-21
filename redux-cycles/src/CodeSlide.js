@@ -15,8 +15,8 @@ const { primary } = theme.screen.colors;
 const StyledCodeSlide = styled(CodeSlide)`
   max-height: 100% !important;
   height: 100% !important;
-  width: 95% !important;
-  max-width: 900px !important;
+  width: 98% !important;
+  max-width: 1000px !important;
   background: ${primary} !important;
 
   > h1 {
@@ -25,7 +25,7 @@ const StyledCodeSlide = styled(CodeSlide)`
 
   > pre {
     padding: 30% 0px !important;
-    font-size: 1.5rem !important;
+    font-size: 1.6rem !important;
     height: 100% !important;
   }
 
@@ -45,7 +45,7 @@ const StyledCodeSlide = styled(CodeSlide)`
     border-radius: 0.5rem;
     box-shadow: ${diffuseShadow};
     max-width: 40rem;
-    max-height: 80%;
+    max-height: 90%;
   }
 `;
 

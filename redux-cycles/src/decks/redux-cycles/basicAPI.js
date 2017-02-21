@@ -16,7 +16,7 @@ const basicApi = () => (
     lang="js"
     code={code}
     ranges={[
-      { loc: [0,16], title: 'basic API' },
+      { loc: [0,16], title: 'createCycleMiddleware' },
       { loc: [0,1], note: 'Redux imports' },
       { loc: [1,2], note: 'Redux-cycles core API' },
       { loc: [2,3], note: 'Cycle core API to be used with xstream' },

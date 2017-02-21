@@ -10,7 +10,8 @@ const example = () => (
     lang="js"
     code={code}
     ranges={[
-      { loc: [0,5], title: 'Some say it\'s a two-liner' }
+      { loc: [0,3], title: 'Some say it\'s a two-liner' },
+      { loc: [4,5], note: 'subscribe()' }
     ]}
   />
 );

@@ -10,10 +10,10 @@ import {
 
 const summary = () => (
   <Slide >
-    <Heading margin="20px 0" size={4}  textColor="secondary" textAlign="left">
+    <Heading margin="20px 0" size={1}  textColor="secondary" textAlign="">
       Summary
     </Heading>
-     <List ordered>
+     <List ordered margin="40px 0 0 22%">
       <Appear><ListItem>Predictable state management</ListItem></Appear>
       <Appear><ListItem>View-provider agnostic</ListItem></Appear>
       <Appear><ListItem>Actions, Reducers</ListItem></Appear>
