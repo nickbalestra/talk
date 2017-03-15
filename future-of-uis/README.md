@@ -1,1 +1,0 @@
-# redux-cycles slides
