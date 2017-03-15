@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="212px" height="233px" viewBox="0 0 212 233" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 5</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-5" transform="translate(1.000000, -4.000000)">
+            <g id="Group-3">
+                <g id="Group-2" transform="translate(44.000000, 0.000000)">
+                    <text id="Computer" font-family="OpenSans-Semibold, Open Sans" font-size="16" font-weight="500" fill="#FFFFFF">
+                        <tspan x="21.1289062" y="17">Computer</tspan>
+                    </text>
+                    <text id="I/O" font-family="OpenSans-Light, Open Sans" font-size="14" font-weight="300" fill="#FFFFFF">
+                        <tspan x="52.0014648" y="116">I/O</tspan>
+                    </text>
+                    <text id="Human" font-family="OpenSans-Semibold, Open Sans" font-size="16" font-weight="500" fill="#FFFFFF">
+                        <tspan x="31.546875" y="236">Human</tspan>
+                    </text>
+                    <g id="Group" transform="translate(45.000000, 32.000000)" stroke-width="2">
+                        <circle id="Oval" stroke="#766F93" fill="#D2CDE6" cx="15" cy="15" r="15"></circle>
+                        <circle id="Oval" stroke="#48703A" fill="#84FC43" cx="15" cy="166" r="15"></circle>
+                    </g>
+                    <g id="Arrow" transform="translate(0.000000, 66.000000)">
+                        <g>
+                            <g>
+                                <path d="M39.5,111.547826 L23.5,103.547826 L39.5,95.5478261 C39.5,95.5478261 36.6890788,99.4341965 36.6890788,103.469192 C36.6890788,107.504188 39.5,111.547826 39.5,111.547826 Z" id="Arrowhead" fill="#D2CDE6" transform="translate(31.500000, 103.547826) rotate(-140.929993) translate(-31.500000, -103.547826) "></path>
+                                <path d="M34.5,0.452173913 C34.5,0.452173913 0.5,20.373913 0.5,53.5478261 C0.5,86.7217391 31.5,103.547826 31.5,103.547826" id="Line" stroke="#D2CDE6" stroke-linecap="square"></path>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="Arrow" transform="translate(100.500000, 116.500000) scale(-1, -1) translate(-100.500000, -116.500000) translate(79.000000, 59.000000)">
+                        <g>
+                            <g>
+                                <path d="M39.5,111.547826 L23.5,103.547826 L39.5,95.5478261 C39.5,95.5478261 36.6890788,99.4341965 36.6890788,103.469192 C36.6890788,107.504188 39.5,111.547826 39.5,111.547826 Z" id="Arrowhead" fill="#84FC43" transform="translate(31.500000, 103.547826) rotate(-140.929993) translate(-31.500000, -103.547826) "></path>
+                                <path d="M34.5,0.452173913 C34.5,0.452173913 0.5,20.373913 0.5,53.5478261 C0.5,86.7217391 31.5,103.547826 31.5,103.547826" id="Line" stroke="#84FC43" stroke-linecap="square"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <ellipse id="Oval-2" fill="#24242D" cx="164" cy="121" rx="14" ry="7"></ellipse>
+                <ellipse id="Oval-2" fill="#24242D" cx="44" cy="121" rx="14" ry="7"></ellipse>
+                <path d="M0,121 L210,121" id="Line" stroke="#FFFFFF" stroke-linecap="square" opacity="0.195545709"></path>
+            </g>
+            <path d="M54.5,115.547826 L38.5,107.547826 L54.5,99.5478261 C54.5,99.5478261 51.6890788,103.434196 51.6890788,107.469192 C51.6890788,111.504188 54.5,115.547826 54.5,115.547826 Z" id="Arrowhead" fill="#D2CDE6" transform="translate(46.500000, 107.547826) rotate(-78.930000) translate(-46.500000, -107.547826) "></path>
+            <path d="M171.5,142.547826 L155.5,134.547826 L171.5,126.547826 C171.5,126.547826 168.689079,130.434196 168.689079,134.469192 C168.689079,138.504188 171.5,142.547826 171.5,142.547826 Z" id="Arrowhead" fill="#84FC43" transform="translate(163.500000, 134.547826) scale(-1, -1) rotate(-73.930000) translate(-163.500000, -134.547826) "></path>
+        </g>
+    </g>
+</svg>
