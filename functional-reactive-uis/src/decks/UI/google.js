@@ -13,7 +13,7 @@ preloader([
 
 
 const googleUI = () => (
-  <Slide transition={["fade"]} bgImage={google.replace("/", "")} />
+  <Slide transition={["fade"]} bgImage={google} />
 );
 
 export default googleUI;

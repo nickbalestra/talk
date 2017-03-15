@@ -15,7 +15,7 @@ preloader([
 
 
 const echoUI = () => (
-  <Slide transition={["fade"]} bgImage={echo.replace("/", "")}>
+  <Slide transition={["fade"]} bgImage={echo}>
   </Slide>
 );
 

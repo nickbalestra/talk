@@ -13,7 +13,7 @@ preloader([
 
 
 const birdlyUI = () => (
-  <Slide transition={["fade"]} bgImage={birdly.replace("/", "")} />
+  <Slide transition={["fade"]} bgImage={birdly} />
 );
 
 export default birdlyUI;
